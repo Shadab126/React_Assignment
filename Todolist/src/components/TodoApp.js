@@ -18,7 +18,8 @@ function TodoApp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!newTask) return;
+    if (!newTask) 
+    return;
     addItem(newTask);
     setNewTask("");
   };
@@ -28,7 +29,7 @@ function TodoApp() {
   return (
     <div className="App">
       <Header title="Task List" />
-    <form className="addForm" onSubmit={handleSubmit}>
+      <form className="addForm" onSubmit={handleSubmit}>
         <label htmlFor="addItem">Add Item</label>
         <input
           autoFocus
@@ -47,11 +48,11 @@ function TodoApp() {
         >
           <FaPlus />
         </button>
-    </form>
-     <TaskItem tasks={tasks} setTasks={setTasks} />
+      </form>
+      <TaskItem tasks={tasks} setTasks={setTasks} />
       <div
         className="completeTask"
-         style={{
+        style={{
           backgroundColor: " steelblue",
           display: "grid",
           placeContent: "center",
@@ -63,8 +64,10 @@ function TodoApp() {
           fontWeight: "bold",
           fontSize: "25px",
           color: "aliceblue",
-          }}
-         > Completed Task {taskCompleted.length}
+        }}
+      >
+        {" "}
+        Completed Task {taskCompleted.length}
       </div>
 
       <Footer length={tasks.length} />
