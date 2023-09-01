@@ -3,13 +3,13 @@ import { FaTrashAlt } from "react-icons/fa";
 
 function Forms({ userData, setUserData, number, setNumber, name, setName }) {
   
-//Form Submission functionality
+  //Form Submission functionality
   const handleSubmit = (event) => {
     event.preventDefault();
-     const id = userData.length ? userData[userData.length - 1].id + 1 : 1;
-      setUserData([...userData, { name, number,id }]);
-      setName("");
-      setNumber("");
+    const id = userData.length ? userData[userData.length - 1].id + 1 : 1;
+    setUserData([...userData, { name, number, id }]);
+    setName("");
+    setNumber("");
   };
 
   //Delete functionality
@@ -57,19 +57,27 @@ function Forms({ userData, setUserData, number, setNumber, name, setName }) {
           </form>
         </main>
         <div className="user_main">
-        <h2 style={{justifyContent:'center', textAlign:'center', margin:'auto'}}>User Data:</h2>
-        <ul className="ul_list">
-          {userData.map((user) => (
-            <li className="user mb-2" key={user.id}>
-              {user.name} - {user.number}
-              <FaTrashAlt className="delete"
-              onClick={() => handleDelete(user.id)}
-            />
-            </li>
-          )
-          )}
-        </ul>
-      </div>
+          <h2
+            style={{
+              justifyContent: "center",
+              textAlign: "center",
+              margin: "auto",
+            }}
+          >
+            User Data:
+          </h2>
+          <ul className="ul_list">
+            {userData.map((user) => (
+              <li className="user mb-2" key={user.id}>
+                {user.name} - {user.number}
+                <FaTrashAlt
+                  className="delete"
+                  onClick={() => handleDelete(user.id)}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </div>
   );

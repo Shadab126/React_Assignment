@@ -1,0 +1,18 @@
+.note-card {
+    width: 33.33%; /* Set the width to 33.33% for a 3-column layout */
+    float: left; /* Float the cards to achieve the grid effect */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    padding: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .note-card {
+      width: 50%; /* For smaller screens, set the width to 50% for a 2-column layout */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .note-card {
+      width: 100%; /* For even smaller screens, set the width to 100% for a single column layout */
+    }
+  }

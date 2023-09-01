@@ -1,0 +1,45 @@
+.App {
+  overflow: hidden;
+}
+
+.navbar {
+  background-color: #000;
+}
+.image{
+  /* margin-top: 10rem; */
+  height: 4rem;
+}
+/* .nav-item {
+  text-decoration: none;
+  list-style: none;
+} */
+
+.text{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav-list {
+  list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    height: 4rem;
+}
+
+.footer{
+  background-color: #000;
+  color: #fff;
+  height: 4rem;
+  margin-top: 50rem;
+  justify-content: center;
+}
+.card_main{
+  border-radius: 5px;
+  width: 18rem;
+  margin: auto;
+  background-color: orange;
+  margin-top: 3rem;
+}

@@ -9,6 +9,7 @@ function TodoApp() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 
+  ///add functionality
   const addItem = (task) => {
     const id = tasks.length ? tasks[tasks.length - 1].id + 1 : 1;
     const myNewTask = { id, checked: false, task };
@@ -16,10 +17,10 @@ function TodoApp() {
     setTasks(listTasks);
   };
 
+  ///submit functionality
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!newTask) 
-    return;
+    if (!newTask) return;
     addItem(newTask);
     setNewTask("");
   };

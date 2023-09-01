@@ -1,23 +1,25 @@
-import React from 'react';
+import { useState } from "react";
 import ReusableButton from './../components/ReusableButton';
-
 
 const ButtonA = () => {
 
-    // const [count, setCount] = useState('')
-
-    // const increment = () => {
-    //     setCount (count + 1);
-    // }
+  const [count, setCount] = useState(0);
+  
   const handleClickA = () => {
-    alert('ButtonA is clicked!');
+  setCount(count + 1);
   };
+
+  const handleClickB = () => {
+    setCount(count - 1);
+    };
 
   return (
     <div>
       <h2>Button A Functionality</h2>
-      {/* {count} */}
-      <ReusableButton label="Click Me" onClick={handleClickA} style={{ background: 'blue', color: 'white' }} />
+     
+      <ReusableButton label="+" onClick={handleClickA} style={{ background: 'green', color: 'white' }} />
+      {count}
+      <ReusableButton label="-" onClick={handleClickB} style={{ background: 'red', color: 'white' }} />
     </div>
   );
 };
